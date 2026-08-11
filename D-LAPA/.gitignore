@@ -1,0 +1,44 @@
+# Private data, checkpoints, and generated artifacts
+datasets/
+checkpoints/
+lapa_checkpoints/
+outputs/
+results/
+rollouts/
+wandb/
+logs/
+*.pt
+*.pth
+*.ckpt
+*.tar
+*.zip
+
+# Machine- and scheduler-specific launch configuration
+*.pbs
+*.qsub
+run_job*
+job_scripts/
+scripts/local/
+.env
+.env.*
+!.env.example
+
+# PBS job output/error logs: <name>.o<PID>, <name>.e<PID>
+*.o[0-9]*
+*.e[0-9]*
+
+# One-off smoke/overfit utilities
+**/run_stage25_simple.sh
+**/make_one_task_jsonl.py
+**/*smoke_train*
+**/*smoke-test*
+
+# Python/editor caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+.vscode/
+.idea/

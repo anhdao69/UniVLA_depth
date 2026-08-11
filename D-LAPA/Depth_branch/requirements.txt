@@ -1,0 +1,27 @@
+# --- LAPA (JAX/Flax) stack, copied from the parent repo's requirements.txt ---
+# Also needs a GPU jax/jaxlib build, e.g.:
+#   pip install "jax[cuda12]==0.4.23" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+git+https://github.com/lhao499/tux.git
+flax==0.7.0
+optax==0.1.7
+chex==0.1.82
+einops
+transformers==4.29.2
+datasets==2.13.0
+tqdm
+ml_collections
+gcsfs
+requests
+typing-extensions
+sentencepiece
+Pillow
+scipy==1.12.0
+albumentations
+
+# --- Model4 (PyTorch) stack, additive on top of the above ---
+# Do NOT `pip install laq/setup.py` for this bundle: that setup.py pulls in a much
+# larger, partly conflicting stack (tensorflow, different transformers pin, etc.)
+# meant for other laq/ training scripts. Model4 inference only needs:
+torch
+opencv-python
+beartype
